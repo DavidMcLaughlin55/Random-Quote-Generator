@@ -1,14 +1,16 @@
 /** 
  * Treehouse Techdegree
  * Random Quote Generator - CSS
+ * CSS provided by Treehouse - Minor adjustments by David McLaughlin (DM) where noted.
  */
 
- @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap'); /*DM*/
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap'); /*DM*/
 
 body {
-  background-color: rgb(58, 193, 98);
+  background-color: #464F51; /*DM*/
   color: white;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Roboto', sans-serif;
   padding: 5px;
 }
 
@@ -26,6 +28,10 @@ h1 {
   text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.3);
 }
 
+p {
+  font-family: 'Amatic SC', cursive;
+}
+
 .load-quote {
   color: #fff;
   text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.3);
@@ -41,7 +47,9 @@ h1 {
 }
 
 .load-quote:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgb(206, 200, 200); /*DM*/
+  color: black; /*DM*/
+  transition: all .50s ease-in-out; /*DM*/
 }
 
 .load-quote:focus {
@@ -53,6 +61,8 @@ h1 {
   max-width: 1024px;
   margin: auto;
   padding: 5px;
+  border: 2px solid black; /*DM*/
+  border-radius: 4px; /*DM*/
 }
 
 .quote-box {
@@ -139,8 +149,6 @@ h1 {
   .container {
     padding: 25px 25px 15px 55px;
     background: rgba(0, 0, 0, 0.1);
-    border-left: 5px solid rgba(0, 0, 0, 0.3);
-    border-radius: 0 4px 4px 0;
   }
 
   .quote {
@@ -161,6 +169,6 @@ h1 {
   }
 
   .source {
-    font-size: 1.25rem;
+    font-size: 2rem;
   }
 }

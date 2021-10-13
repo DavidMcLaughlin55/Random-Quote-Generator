@@ -3,12 +3,9 @@ Treehouse Techdegree:
 Project 4 - Random Quote Generator
 *************************************************/
 
-// For assistance: 
-  // Check the "Project Resources" section of the project instructions
-  // Reach out in your Slack community
-
 /*** 
- * `quotes` array 
+ * Quotes Array 
+ * This is an array of quotations for various authors.
 ***/
 
 const quotes = [
@@ -34,27 +31,42 @@ const quotes = [
   year: 2002},
 ];
 
-//console.log(quotes);
-
 
 
 /***
- * `getRandomQuote` function
+ * getRandomQuote Function
+ * This function grabs a random quote from the Quotes array.
 ***/
 function getRandomQuote() {
-  
-}
+  const randomNumber = quotes[Math.floor(Math.random() * quotes.length)];
+  return randomNumber;
+};
+
+
 
 
 /***
- * `printQuote` function
+ * printQuote Function
+ * This function generates a new quote to display based upon the random quote provided by the getRandomQuote function.
 ***/
-
+function printQuote() {
+  const randomQuote = getRandomQuote();
+  let quotation = `<p class="quote">${randomQuote.quote}</p> <p class="source">${randomQuote.source}`;
+  if (randomQuote.citation !== undefined){
+    quotation += `<span class="citation">${randomQuote.citation}</span>`;
+  }; 
+  if (randomQuote.year !== undefined) {
+    quotation += `<span class="year">${randomQuote.year}</span>`;
+  };
+  quotation += "</p>";
+  //console.log(quotation);
+  return document.getElementById('quote-box').innerHTML = quotation; 
+};
 
 
 /***
- * click event listener for the print quote button
- * DO NOT CHANGE THE CODE BELOW!!
+ * Loads a new quote to display on-click using printQuote function.
+ * This line was provided by Treehouse.
 ***/
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
