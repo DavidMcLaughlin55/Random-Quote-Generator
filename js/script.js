@@ -52,10 +52,10 @@ function getRandomQuote() {
 function printQuote() {
   const randomQuote = getRandomQuote();
   let quotation = `<p class="quote">${randomQuote.quote}</p> <p class="source">${randomQuote.source}`;
-  if (randomQuote.citation !== undefined){
+  if (randomQuote.citation){
     quotation += `<span class="citation">${randomQuote.citation}</span>`;
   }; 
-  if (randomQuote.year !== undefined) {
+  if (randomQuote.year) {
     quotation += `<span class="year">${randomQuote.year}</span>`;
   };
   quotation += "</p>";
